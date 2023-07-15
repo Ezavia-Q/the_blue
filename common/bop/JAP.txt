@@ -1,0 +1,216 @@
+JAP_centralization_bop = {
+	initial_value = 0.75
+	left_side = JAP_Civilian_government ##文官
+	right_side = JAP_army_headquarters  ##军部
+	decision_category = JAP_centralization_bop  
+
+	range = { #权力平衡，平衡政府
+		id = JAP_centralization_bop 
+		min = -0.25
+		max = 0.25
+		modifier = {
+			political_advisor_cost_factor = -0.15
+			surrender_limit	= 0.1
+		}
+	}
+
+	side = {  
+		id = JAP_army_headquarters ##军部主导
+		icon = GFX_bop_SWI_centralization_council_side
+		
+		range = {
+			id = JAP_army_headquarters
+			min = 1
+			max = 1
+			modifier = {
+				fascism_drift = 0.1
+				war_support_factor = 0.3
+				political_advisor_cost_factor = 1
+				surrender_limit	= 0.25
+				conscription = 0.05
+				stability_factor = -0.2
+			}
+			
+		}
+		range = {
+			id = JAP_High_influence_of_military #高
+			min = 0.75
+			max = 0.99
+			modifier = {
+				fascism_drift = 0.05
+				war_support_factor = 0.2
+				political_advisor_cost_factor = 0.75
+				surrender_limit	= 0.2
+				conscription = 0.05
+				stability_factor = -0.1
+			}
+			
+		}
+		range = {
+			id = JAP_centre_influence_of_military #中
+			min = 0.50
+			max = 0.75
+			modifier = {
+				fascism_drift = 0.03
+				war_support_factor = 0.15
+				political_advisor_cost_factor = 0.5
+				surrender_limit	= 0.15
+				conscription = 0.04
+				stability_factor = -0.05
+			}
+		}
+		range = {
+			id = JAP_low_influence_of_military #低
+			min = 0.25
+			max = 0.50
+			modifier = {
+				fascism_drift = 0.01
+				war_support_factor = 0.1
+				political_advisor_cost_factor = 0.25
+				surrender_limit	= 0.1
+				conscription = 0.02
+				stability_factor = -0.05
+			}
+		}
+		
+	}
+
+
+	side = {
+		id = JAP_Civilian_government #文官
+		icon = GFX_bop_SWI_centralization_canton_side
+		range = {
+			id = JAP_Civilian_government
+			min = -1
+			max = -1
+			modifier = {
+				stability_factor = 0.2	
+				consumer_goods_factor = -0.05
+				mobilization_speed = -0.5
+				war_support_factor = -0.2	
+				political_power_factor = 0.25	
+				trade_laws_cost_factor  = -0.5
+                economy_cost_factor = -0.15
+                political_advisor_cost_factor = -0.25
+				production_speed_buildings_factor = 0.1
+			}
+			
+		}
+
+		range = {
+			id = JAP_Cl_2
+			min = -0.75
+			max = -0.99
+			modifier = {
+				mobilization_speed = -0.25
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = -0.05
+				rade_laws_cost_factor  = -0.5
+                economy_cost_factor = -0.5
+                political_advisor_cost_factor = -0.5
+				political_power_factor = 0.15	
+			}
+		}
+		range = {
+			id = JAP_Cl_3
+			min = -0.5
+			max = -0.75
+			modifier = {
+				mobilization_speed = -0.2
+				stability_factor = 0.1
+				rade_laws_cost_factor  = -0.5
+                economy_cost_factor = -0.5
+                political_advisor_cost_factor = -0.5
+				political_power_factor = 0.15	
+			}
+		}
+		range = {
+			id = JAP_Cl_4
+			min = -0.25
+			max = -0.5
+			modifier = {
+				mobilization_speed = -0.1
+				stability_factor = 0.1
+				rade_laws_cost_factor  = -0.5
+                economy_cost_factor = -0.5
+                political_advisor_cost_factor = -0.5
+				political_power_factor = 0.15	
+			}
+		}
+		
+	}
+
+
+	
+	side = {
+		id = JAP_joint_meeting #联席会议
+		icon = GFX_bop_SWI_centralization_council_side
+		range = {
+			id = JAP_joint_meeting1
+			min = 1
+			max = 1
+			modifier = {
+				political_advisor_cost_factor = 0.75
+                tank_manufacturer_cost_factor = 0.75
+                naval_manufacturer_cost_factor = 0.75
+                aircraft_manufacturer_cost_factor = 0.75
+                materiel_manufacturer_cost_factor = 0.75
+                industrial_concern_cost_factor = 0.75
+                theorist_cost_factor = 0.75
+                army_chief_cost_factor = 0.75
+                navy_chief_cost_factor = 0.75
+                air_chief_cost_factor = 0.75
+                high_command_cost_factor = 0.75
+				political_power_factor = -0.5
+				stability_factor = -0.25
+			}
+			
+		}
+
+		range = {
+			id = JAP_joint_meeting2
+			min = 0.75
+			max = 0.99
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.15
+				mobilization_laws_cost_factor = 0.5
+                trade_laws_cost_factor  = 0.5
+                economy_cost_factor = 0.5
+			}
+		}
+
+
+		range = {
+			id = JAP_joint_meeting3
+			min = 0.5
+			max = 0.75
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.10
+				mobilization_laws_cost_factor = 0.25
+                trade_laws_cost_factor  = 0.25
+                economy_cost_factor = 0.25
+			}
+			on_activate = {
+				swap_ideas = {
+					add_idea = Fumimaro_Cabinet
+					remove_idea = Yoshida_Cabinet
+				}
+			}
+		}
+		range = {
+			id = JAP_joint_meeting4
+			min = 0.25
+			max = 0.5
+			modifier = {
+				stability_factor = -0.05
+				mobilization_laws_cost_factor = 0.15
+                trade_laws_cost_factor  = 0.15
+                economy_cost_factor = 0.15
+			}
+		}
+		
+	}
+} 

@@ -1,0 +1,93 @@
+###########################
+# DJapanese Events
+###########################
+
+add_namespace = D_japan
+
+country_event = {
+	id = D_japan.1   ##滨田演说
+    title = D_japan.1.t 
+    desc = D_japan.1.d 
+	
+    fire_only_once = yes
+	is_triggered_only = yes
+    
+	immediate = { 
+		complete_national_focus = Hamada_Speech
+	}
+	
+    option = { 
+        name = D_japan.1.a
+		add_stability = -0.05
+		
+	}
+
+    
+}
+
+country_event = {
+	id = D_japan.2   ##邀请美国投资
+    title = D_japan.2.t 
+    desc = D_japan.2.d 
+	
+    fire_only_once = yes
+	is_triggered_only = yes
+    
+	immediate = { 
+		complete_national_focus = Hamada_Speech
+	}
+	
+    option = { 
+		ai_chance = {
+			factor = 100
+		}
+        name = D_japan.2.a  ##同意
+		add_political_power = 25
+		add_ideas = Asian_Investment_Bank_Development
+		JAP = {
+		country_event = { days = 0 id = D_japan.3 }
+			}
+	}
+	option = { 
+        name = D_japan.2.b ##不同意
+		add_political_power = -25
+		
+	}
+}
+
+country_event = {
+	id = D_japan.3   ##美国投资
+    title = D_japan.3.t 
+    desc = D_japan.3.d 
+	
+    fire_only_once = yes
+	is_triggered_only = yes
+    
+	immediate = { 
+		complete_national_focus = Hamada_Speech
+	}
+	
+    option = { 
+		add_power_balance_value = {
+			id = JAP_centralization_bop
+			value = 0.05
+		}
+        name = D_japan.3.a  ##
+        add_political_power = 25
+		hidden_effect = {
+			remove_ideas = Asian_Investment_Bank_deficit
+			every_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+	
+
+    
+}
