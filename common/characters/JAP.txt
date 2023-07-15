@@ -1,5 +1,5 @@
 characters={
-	JAP_emperor_hirohito={
+	JAP_emperor_hirohito={ ##changed
 		name=JAP_emperor_hirohito
 		portraits={
 			civilian={
@@ -11,6 +11,11 @@ characters={
 			traits={ warrior_code emperor_showa imperial_sanction }
 			expire="1989.1.1.1"
 			id=700
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1989.1.1.1"
+			id=-1
 		}
 	}
 
@@ -28,17 +33,22 @@ characters={
 		}
 	}
 
-	JAP_tetsu_katayama={
+	JAP_tetsu_katayama={   ##changed
 		name=JAP_tetsu_katayama
 		portraits={
 			civilian={
 				large="GFX_Portrait_tetsu_katayama"
 			}
+			army = {
+				small = GFX_idea_JAP_tetsu_katayama
+			}
 		}
-		country_leader={
-			ideology=liberalism
-			expire="1989.1.1.1"
-			id=-1
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_tetsu_katayama
+			traits = {
+				silent_workhorse
+			}
 		}
 	}
 
@@ -295,6 +305,13 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			legacy_id=0
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_naruhiko_higashikuni
+			traits = {
+				noble_beurocrat
+			}
 		}
 	}
 
@@ -1587,6 +1604,7 @@ characters={
 		}
 	}
 
+	## new_political_advisor
 	JAP_konoe_fuminaro = {
 		name = JAP_konoe_fuminaro
 		portraits = {
