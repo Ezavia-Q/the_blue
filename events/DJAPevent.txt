@@ -33,9 +33,7 @@ country_event = {
     fire_only_once = yes
 	is_triggered_only = yes
     
-	immediate = { 
-		complete_national_focus = Hamada_Speech
-	}
+	
 	
     option = { 
 		ai_chance = {
@@ -63,9 +61,7 @@ country_event = {
     fire_only_once = yes
 	is_triggered_only = yes
     
-	immediate = { 
-		complete_national_focus = Hamada_Speech
-	}
+	
 	
     option = { 
 		add_power_balance_value = {

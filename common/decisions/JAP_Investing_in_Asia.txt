@@ -28,6 +28,10 @@ Investing_in_Asia = {
 		    }
 	    } 
 		remove_effect = {
+			add_power_balance_value = {
+				id = JAP_centralization_bop
+				value = 0.05
+			}
 			clr_country_flag = Economic_investment
 			CHI = { 
 				remove_ideas = Asian_Investment_Bank_Development
@@ -59,6 +63,10 @@ Investing_in_Asia = {
 			set_country_flag = Economic_investment
 	   	}
 		complete_effect = {  
+			add_power_balance_value = {
+				id = JAP_centralization_bop
+				value = -0.05
+			}
 			set_country_flag = Economic_investment
 			JAP = { 
 				add_ideas = Asian_Investment_Bank_Development
@@ -96,6 +104,10 @@ Investing_in_Asia = {
 			
 	   	}
 		complete_effect = {  
+			add_power_balance_value = {
+				id = JAP_centralization_bop
+				value = 0.05
+			}
 			set_country_flag = Economic_investment
 			SIA = { 
 				add_ideas = Asian_Investment_Bank_Development
@@ -132,6 +144,10 @@ Investing_in_Asia = {
 			
 	   	}
 		complete_effect = {  
+			add_power_balance_value = {
+				id = JAP_centralization_bop
+				value = 0.05
+			}
 			set_country_flag = Economic_investment
 			MAN = { 
 				add_ideas = Asian_Investment_Bank_Development
@@ -168,6 +184,10 @@ Investing_in_Asia = {
 		
 	   }
 	complete_effect = {  
+		add_power_balance_value = {
+			id = JAP_centralization_bop
+			value = 0.05
+		}
 		set_country_flag = Economic_investment
 		RAJ = { 
 			add_ideas = Asian_Investment_Bank_Development
@@ -201,14 +221,15 @@ Investing_in_Asia = {
 			
 		}
 		modifier = {
-			add_power_balance_value = {
-				id = JAP_centralization_bop
-				value = 0.2
-			}
+			
 			consumer_goods_factor = -0.15
 	   	}
 		complete_effect = {  
 			remove_ideas = Development_Bank_Headquarters
+			add_power_balance_value = {
+				id = JAP_centralization_bop
+				value = 0.2
+			}
 		}
 		remove_effect = {
 			add_timed_idea = { idea = Asian_Investment_Bank_bankruptcy days = 720 } 

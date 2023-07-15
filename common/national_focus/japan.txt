@@ -81,7 +81,8 @@
 			
 			#效果
 			add_political_power = 100
-			set_party_name = { ideology = democratic long_name = Rikken_Seiyūkai name = Rikken_Seiyūkai }
+			set_party_name = { ideology = democratic long_name = Rikken_Seiyukai name = Rikken_Seiyukai }
+			set_party_name = { ideology = fascism long_name = army_headquarters name = army_headquarters }
 			add_popularity = { ideology = democratic popularity = 0.60 } 
 			add_ideas = Hirota_Cabinet
 			set_politics = {  
@@ -183,7 +184,7 @@
 
 	focus = {
 		id = Compromise_diplomacy #妥协外交
-		icon = 0#在.gfx文件里的图片名
+		icon = GFX_goal_tripartite_pact#在.gfx文件里的图片名
 		relative_position_id = Reiterating_the_Three_Principles_of_Hirota
 		prerequisite = { focus = Reiterating_the_Three_Principles_of_Hirota }
 		mutually_exclusive = { focus = Adhere_to_the_Three_Principles_and_remain_unwavering }
@@ -2334,7 +2335,7 @@
 
 	focus = {
 		id = Abolish_unequal_treaties_with_China#废除对华不平等条约
-		icon = 0#在.gfx文件里的图片名
+		icon = GFX_goal_generic_position_armies#在.gfx文件里的图片名
 		relative_position_id = Yoshida_Cabinet1
 		prerequisite = { focus = Yoshida_Cabinet1 }
 		x = -1
@@ -3311,7 +3312,7 @@
     }
 
 	focus = {
-		id = WDZF#WDZF
+		id = WDZF#稳定政府
 		icon = GFX_focus_generic_support_the_left_right#在.gfx文件里的图片名
 		relative_position_id = Fumimaro_Cabinet1
 		prerequisite = { focus = Fumimaro_Cabinet1 }
@@ -3338,9 +3339,12 @@
 		search_filters = { }   #标签
 
 		completion_reward = {	
+			
 			#效果
 			set_power_balance = {
-				id = JAP_centralization_bop						
+				id = JAP_centralization_bop				
+				right_side = Imperial_Rule_Assistance_Association
+				left_side = JAP_Civilian_government			
 				set_value = 0.1			
 			}
 		}

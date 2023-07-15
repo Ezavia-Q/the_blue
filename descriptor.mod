@@ -1,6 +1,6 @@
-version="1.12.*"
+version="1111"
 tags={
-	"Historical"
+	"Map"
 }
-name="demo2"
+name="JAPD"
 supported_version="1.12.14"

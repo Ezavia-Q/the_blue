@@ -213,4 +213,66 @@ JAP_centralization_bop = {
 		}
 		
 	}
+
+	side = {  
+		id = Imperial_Rule_Assistance_Association ##大政翼赞会
+		icon = GFX_bop_ITA_grand_council_side
+		
+		range = {
+			id = JAP_IRAA_1  ##万民翼赞
+			min = 1
+			max = 1
+			modifier = {
+				consumer_goods_factor = -0.05
+				conscription = 0.02	
+				production_factory_efficiency_gain_factor = 0.05	
+				surrender_limit = 0.15		
+				puppet_cost_factor = -0.15
+				war_support_factor = 0.15
+				max_command_power = 50
+				command_power_gain = 0.25	
+			}
+		on_activate = {
+			set_party_name = { ideology = democratic long_name = Yizan_Association_Rikken_Seiyukai name = Yizan_Seiyukai }
+		  }	
+		}
+		range = {
+			id = JAP_IRAA_2 #高
+			min = 0.75
+			max = 0.99
+			modifier = {
+				surrender_limit = 0.05
+				political_power_factor = 0.25
+				war_support_factor = 0.15
+				max_command_power = 50
+			}
+			
+		}
+		range = {
+			id = JAP_IRAA_3 #中
+			min = 0.50
+			max = 0.75
+			modifier = {
+				political_power_factor = 0.15
+				war_support_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				max_command_power = 30
+			}
+		}
+		range = {
+			id = JAP_IRAA_4 #低
+			min = 0.25
+			max = 0.50
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				max_command_power = 30
+			}
+		}
+		
+	}
+
+
 } 

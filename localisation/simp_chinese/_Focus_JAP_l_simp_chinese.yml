@@ -29,14 +29,13 @@ Prevent_the_revival_of_Imperial_Way_Faction_desc:0"防止皇道派死灰复燃"
 Utilizing_Fleet_Faction_and_Chinese_Bureaucrats:0"利用舰队派和华族官僚"
 Utilizing_Fleet_Faction_and_Chinese_Bureaucrats_desc:0"利用舰队派和华族官僚"
 Hamada_Speech:0"滨田演说"
-Hamada_Speech_desc:0"滨田国松当即在议会上发表演说，矛头直指军部，认为军部干预政治将成为独裁政治的温床，指出：“强化独裁政治的思潮，一直在军内泛滥，它时刻有破坏文武恪守其准则的危险。这正是国民所共同忧虑之处。”"
+Hamada_Speech_desc:0"滨田国松当即在议会上发表演说，矛头直指军部，认为军部干预政治将成为独裁政治的温床，指出：“强化独裁政治的思潮，一直在军内泛滥，它时刻有破坏文武恪守其准则的危险。这正是国民所共同忧虑之处。""
 Guangtian_Daoge:0"广田倒阁"
 Guangtian_Daoge_desc:0"广田倒阁"
 seize_the_opportunity:0"把握时机"
 seize_the_opportunity_desc:0"把握时机"
 Yoshida_Cabinet1:0"吉田内阁"
-Yoshida_Cabinet1_desc:0"904年9月，学习院停办大学科。吉田转入东京帝国大学法科大学，并于1906年从政治系毕业，时年28岁。大学毕业后，吉田茂参加外交官及领事官考试合格，被任命为日本驻奉天(沈阳)总领事的见习领事官。
-1908年，吉田茂与日本政界巨头牧野伸显的长女雪子结婚。牧野是日本“维新三杰”之一大久保利通的次子，历任外务大臣、内大臣、枢密顾问官等要职，是天皇的重臣，也是二战前日本政界“亲英美”派首领。牧野对吉田茂日后的政治倾向有决定性的影响。"
+Yoshida_Cabinet1_desc:0"1904年9月，学习院停办大学科。吉田转入东京帝国大学法科大学，并于1906年从政治系毕业，时年28岁。大学毕业后，吉田茂参加外交官及领事官考试合格，被任命为日本驻奉天(沈阳)总领事的见习领事官。1908年，吉田茂与日本政界巨头牧野伸显的长女雪子结婚。牧野是日本“维新三杰”之一大久保利通的次子，历任外务大臣、内大臣、枢密顾问官等要职，是天皇的重臣，也是二战前日本政界“亲英美”派首领。牧野对吉田茂日后的政治倾向有决定性的影响。"
 Abolish_unequal_treaties_with_China:0"废除对华不平等条约"
 Abolish_unequal_treaties_with_China_desc:0"废除对华不平等条约"
 Xiao_Riben_Doctrine:0"小日本主义"
@@ -54,7 +53,8 @@ Rocket_engine_development_desc:0"火箭发动机研发"
 Integrating_the_Japanese_economy:0"整合日本经济"
 Integrating_the_Japanese_economy_desc:0"整合日本经济"
 
-
+WDZF:0"稳定政府"
+WDZF_desc:0"稳定政府"
 
 ##民族精神
 Asian_Investment_Bank_bankruptcy:0"亚洲开发银行的破产"
@@ -69,9 +69,6 @@ Yoshida_Cabinet:0"吉田内阁"
 Hirota_Cabinet:0"广田内阁"
 not_have_Cabinet:0"空内阁"
 
-
-
-
 ##决议
 CHI_Investing_in_Asia:0"中国开发"
 JAP_Investing_in_Asia:0"日本开发"
@@ -80,13 +77,18 @@ MAN_Investing_in_Asia:0"满洲开发"
 RAJ_Investing_in_Asia:0"印度开发"
 Clearing_the_Asian_Investment_Bank:0"清算破产亚投行"
 Investing_in_Asia:0"亚投行开发计划"
-
+Economic_investment:0"正在投资"
 
 #bop
+Rikken_Seiyukai:0"立宪政友会"
+Yizan_Association_Rikken_Seiyukai:0"立宪政友会-翼赞维新派"
+Yizan_Seiyukai:0"维新派"
+army_headquarters:0"大本营联席会议"
 JAP_Civilian_government:0"文官"
 JAP_army_headquarters:0"军部"
 JAP_joint_meeting:0"联席会议"
 JAP_centralization_bop:0"平衡政府"
+Imperial_Rule_Assistance_Association:0"大政翼赞会"
 JAP_High_influence_of_military:0"军部支持-高"
 JAP_centre_influence_of_military:0"军部支持-中"
 JAP_low_influence_of_military:0"军部支持-低"
@@ -96,3 +98,15 @@ JAP_Cl_4:0"文官支持-低"
 JAP_joint_meeting4:0"反对派-低"
 JAP_joint_meeting3:0"反对派-中"
 JAP_joint_meeting2:0"反对派-高"
+JAP_joint_meeting1:0"反对派-胜利"
+JAP_IRAA_4:0"翼赞会-低"
+JAP_IRAA_3:0"翼赞会-中"
+JAP_IRAA_2:0"翼赞会-高"
+JAP_IRAA_1:0"万民翼赞"
+
+##事件
+D_japan.1:0"滨田演说"
+D_japan.1.t:0"滨田演说"
+D_japan.1.d:0"滨田国松当即在议会上发表演说，矛头直指军部，认为军部干预政治将成为独裁政治的温床，指出：强化独裁政治的思潮，一直在军内泛滥，它时刻有破坏文武恪守其准则的危险。这正是国民所共同忧虑之处。"
+D_japan.1.a:0"危险的演说"
+

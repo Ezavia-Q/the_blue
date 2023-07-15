@@ -44,9 +44,10 @@ JAP_interservice_rivalry = {
 Investing_in_Asia = {      ##投资亚洲
 	allowed = {
 		original_tag = JAP
-		has_idea = Development_Bank_Headquarters
+		
 	}
 	visible = {
+		is_puppet = no
 		has_idea = Development_Bank_Headquarters
 	}
 }
