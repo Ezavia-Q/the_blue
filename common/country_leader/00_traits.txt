@@ -8381,7 +8381,8 @@ leader_traits = {
 		}
 	}
 
-	plane_trader = {
+	##new traits
+	plane_trader = {  ##飞机商人
 		random = no
 		aircraft_manufacturer_cost_factor = -0.1
 		equipment_bonus = {
@@ -8390,5 +8391,20 @@ leader_traits = {
 				build_cost_ic = -0.1
 			}
 		}
+	}
+
+	popular_politician = { ##民众政治家
+		random = no
+		stability_factor = 0.1
+		political_power_factor = 0.05
+		democratic_drift = 0.05
+	}
+
+	daiseiyokusankai_creator = {  ##大政翼赞会创始人
+		random = no
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.1
+		consumer_goods_factor = 0.03
+		fascism_acceptance = 20
 	}
 }

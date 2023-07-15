@@ -500,6 +500,7 @@ recruit_character = JAP_kingoro_hashimoto
 recruit_character = JAP_sanzo_nosaka
 recruit_character = JAP_hiroshi_oshima
 recruit_character = JAP_kijuro_shidehara
+##new
 recruit_character = JAP_konoe_fuminaro
 recruit_character = JAP_nakajima_chikohei
 

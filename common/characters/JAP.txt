@@ -47,7 +47,7 @@ characters={
 			slot = political_advisor
 			idea_token = JAP_tetsu_katayama
 			traits = {
-				silent_workhorse
+				popular_politician
 			}
 		}
 	}
@@ -289,7 +289,7 @@ characters={
 		}
 	}
 
-	JAP_naruhiko_higashikuni={
+	JAP_naruhiko_higashikuni={  ##changed
 		name=JAP_naruhiko_higashikuni
 		portraits={
 			army={
@@ -1616,7 +1616,7 @@ characters={
 			slot = political_advisor
 			idea_token = JAP_konoe_fuminaro
 			traits = {
-				noble_beurocrat
+				daiseiyokusankai_creator
 			}
 		}
 	}
