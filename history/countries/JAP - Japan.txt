@@ -503,6 +503,8 @@ recruit_character = JAP_kijuro_shidehara
 ##new
 recruit_character = JAP_konoe_fuminaro
 recruit_character = JAP_nakajima_chikohei
+recruit_character = JAP_tojo_hideki
+recruit_character = JAP_wakatsuki_neijirou
 
 
 if = {

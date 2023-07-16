@@ -8407,4 +8407,21 @@ leader_traits = {
 		consumer_goods_factor = 0.03
 		fascism_acceptance = 20
 	}
+
+	unanimous_support = {  ##举国一致体制支持者
+		random = no
+		JAP_centralization_bop_modifier_weekly = {
+			power_balance_weekly = 0.05
+		}
+		consumer_goods_factor = -0.05
+		political_power_factor = -0.05
+	}
+
+	prewar_pacifist = {  ##战前和平主义者代表
+		random = no
+		war_support_factor = -0.1
+		stability_factor = 0.05
+		neutrality_acceptance = 20
+		production_speed_industrial_complex_factor = 0.1
+	}
 }

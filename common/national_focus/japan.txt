@@ -3312,7 +3312,7 @@
     }
 
 	focus = {
-		id = WDZF#稳定政府
+		id = WDZF #稳定政府
 		icon = GFX_focus_generic_support_the_left_right#在.gfx文件里的图片名
 		relative_position_id = Fumimaro_Cabinet1
 		prerequisite = { focus = Fumimaro_Cabinet1 }

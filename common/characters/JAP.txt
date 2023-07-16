@@ -1639,5 +1639,40 @@ characters={
 			}
 		}
 	}
+
+	JAP_tojo_hideki = {
+		name = JAP_tojo_hideki
+		portraits = {
+			army = {
+				small = 0
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_tojo_hideki
+			traits = {
+				unanimous_support
+			}
+			available = {
+				has_completed_focus = Fumimaro_Cabinet1
+			}
+		}
+	}
+
+	JAP_wakatsuki_neijirou = {
+		name = JAP_wakatsuki_neijirou
+		portraits = {
+			army = {
+				small = 0
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_wakatsuki_neijirou
+			traits = {
+				prewar_pacifist
+			}
+		}
+	}
 	# Illusive Gentleman auto-generated
 }
