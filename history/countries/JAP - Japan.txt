@@ -505,6 +505,8 @@ recruit_character = JAP_konoe_fuminaro
 recruit_character = JAP_nakajima_chikohei
 recruit_character = JAP_tojo_hideki
 recruit_character = JAP_wakatsuki_neijirou
+recruit_character = JAP_hanada_konimatsu
+recruit_character = JAP_kishi_nobusuke
 
 
 if = {

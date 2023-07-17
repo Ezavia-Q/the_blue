@@ -1674,5 +1674,45 @@ characters={
 			}
 		}
 	}
+
+	JAP_hanada_konimatsu = {
+		name = JAP_hanada_konimatsu
+		portraits = {
+			army = {
+				small = GFX_idea_generic_navy_asia_2
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_hanada_konimatsu
+			cost = 25
+			traits = {
+				anti_military_fighter
+			}
+			available = {
+				date < 1939.9.6
+			}
+		}
+	}
+
+	JAP_kishi_nobusuke = {
+		name = JAP_kishi_nobusuke
+		portraits = {
+			army = {
+				small = GFX_idea_generic_air_asia_3
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_kishi_nobusuke
+			traits = {
+				showa_no_mikoto
+			}
+			available = {
+				has_idea = JAP_militarism
+				OR ={ date > 1939.1.1 has_completed_focus = JAP_liberate_manchuria }
+			}
+		}
+	}
 	# Illusive Gentleman auto-generated
 }

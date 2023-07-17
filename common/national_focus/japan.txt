@@ -3109,7 +3109,7 @@
  }
 
     focus = {
-	id = Rocket_engine_development#火箭发动机研发
+	id = Rocket_engine_development #火箭发动机研发
 	icon = 1#在.gfx文件里的图片名
 	relative_position_id = JAP_nationalize_war_industry
 	prerequisite = { focus = JAP_nationalize_war_industry }

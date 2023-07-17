@@ -8424,4 +8424,21 @@ leader_traits = {
 		neutrality_acceptance = 20
 		production_speed_industrial_complex_factor = 0.1
 	}
+
+	anti_military_fighter = {  ##反军部斗士
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.1
+		fascism_acceptance = -25
+		democratic_acceptance = 25
+	}
+
+	showa_no_mikoto = {  ##昭和之妖
+		random = no
+		consumer_goods_factor = 0.03
+		production_speed_buildings_factor = 0.1
+		stability_weekly = -0.001
+		industrial_capacity_factory = 0.1
+		production_factory_efficiency_gain_factor = 0.05
+	}
 }
