@@ -18,8 +18,8 @@
 	focus = {
 		id = the_longest_day #最长的一天
 		icon = GFX_focus_eng_move_to_secure_the_dominions #在.gfx文件里的图片名
-		x = 13
-		y = 7
+		x = 6
+		y = 0
 
 		cost = 0
 
@@ -550,11 +550,11 @@
 	focus = {
 		id = JAP_the_manchurian_project
 		icon = GFX_focus_jap_manchurian_project
-		x = 6
+		x = 15
 		y = 0
-		relative_position_id = JAP_strengthen_civilian_government
+
 		offset = {
-			x = -4
+			x = 14
 			y = 0
 			trigger = {
 				NOT = { has_dlc = "Waking the Tiger" }
@@ -1449,9 +1449,7 @@
 
 		}
 
-		bypass = {
-			has_tech = cv_fighter2
-		}
+		
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2182,7 +2180,7 @@
 	id = Hamada_Speech ##滨田演说
 	icon = GFX_focus_rom_parties_end #在.gfx文件里的图片名
 
-	x = 27
+	x = 17
 	y = 7
 
 	cost = 0
@@ -2279,7 +2277,6 @@
 			
 			#效果
 			set_power_balance = {
-
 				id = JAP_centralization_bop				
 				right_side = JAP_joint_meeting
 				left_side = JAP_Civilian_government			
@@ -3350,9 +3347,953 @@
 		}
 	}
 
+	focus = {
+		id = The_Tokyo_Conference ##召开东京会议
+		icon = GFX_focus_generic_national_security #在.gfx文件里的图片名
+		relative_position_id = Fumimaro_Cabinet1
+		prerequisite = { focus = Fumimaro_Cabinet1 }
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = X
+			modifier = {
+				#条件
+				#Add、Factor、Base中选择其一
+			}
+		}
+         
+		available = {	
+			has_war = no		
+			##点国策条件
+		}
+		bypass = {
+			#跳过国策的条件
+		}
+		
+		search_filters = { }   #标签
+
+		completion_reward = {	
+			#效果
+			hidden_effect = {
+			complete_national_focus = Tokyo_Conference
+		 }
+			country_event = { id = D_japan.4 }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = JAP_liaison_conference
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = WDZF }
+		x = 1
+		y = 1
+		relative_position_id = WDZF
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = JAP_liaison_conference
+			every_army_leader = {
+				add_planning = 1
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_spiritual_mobilization  #精神动员
+		icon = GFX_focus_jap_spiritual_mobilization
+		prerequisite = { focus = JAP_liaison_conference }
+		x = 0
+		y = 1
+		relative_position_id = JAP_liaison_conference
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = spiritual_mobilization_idea
+			custom_effect_tooltip = peace_conference_spiritual_mob_modifier_japan
+		}
+	}
 
 
 
+	##东京会议
+
+	
+	focus = {
+		id = Tokyo_Conference  #东京会议
+		icon = GFX_focus_jap_spiritual_mobilization#
+
+		x = 29
+		y = 9
+
+		cost = 0
+
+		ai_will_do = {
+			factor = X
+			modifier = {
+				#条件
+				#Add、Factor、Base中选择其一
+			}
+		}
+		allow_branch = { 
+            has_completed_focus = The_Tokyo_Conference
+		} 
+         
+		available = {			
+			##点国策条件
+			NOt = {
+				always = yes
+			} 		
+		}
+		bypass = {
+			#跳过国策的条件
+		}
+		
+		search_filters = { }   #标签
+
+		completion_reward = {	#效果
+			
+		}
+	}
+	
+	focus = {
+		id = Establishing_Anti_Soviet_Goals  ##确立反苏目标
+		icon = GFX_goal_anti_comintern_pact 
+		relative_position_id = Tokyo_Conference
+		prerequisite = { focus = Tokyo_Conference }
+		mutually_exclusive = { focus = JAP_non_aggression_pact_with_the_soviet_union }
+
+		x = -3
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = X
+			modifier = {
+				#条件
+				#Add、Factor、Base中选择其一
+			}
+		}
+         
+		available = {			
+			##点国策条件
+		}
+		bypass = {
+			#跳过国策的条件
+		}
+		
+		search_filters = { }   #标签
+
+		completion_reward = {	
+			MAN = {	
+					761 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+					714 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+					717 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+					build_railway = { 
+						path = {
+							4572 4503 7652 10433 12412 12355 7670 10463 9623 12342 4551
+						}
+					}	
+				}	
+		}					
+	}
+	focus = {
+		id = The_War_against_the_Soviet_Union #  对苏战争
+		icon = GFX_goal_anti_comintern_pact
+		relative_position_id = JAP_anti_communist_bulwark
+		prerequisite = { focus = JAP_anti_communist_bulwark }
+		x = 0
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = X
+			modifier = {
+				#条件
+				#Add、Factor、Base中选择其一
+			}
+		}
+		will_lead_to_war_with = SOV
+		available = {			
+			##点国策条件
+		}
+		bypass = {
+			#跳过国策的条件
+		}
+		
+		search_filters = { }   #标签
+
+		completion_reward = {	
+			create_wargoal = { target = SOV type = puppet_wargoal_focus }
+			#效果
+		}
+	}
+
+
+
+
+	focus = {
+		id = JAP_anti_communist_bulwark
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = Establishing_Anti_Soviet_Goals }
+		x = 0
+		y = 1
+		relative_position_id = Establishing_Anti_Soviet_Goals
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				SOV = { has_war = yes }
+			}
+		}
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			every_other_country = {
+				limit = { 
+					OR = {
+						is_major = yes 
+						tag = PRC
+					}
+					has_government = communism
+				}
+				add_opinion_modifier = { target = ROOT modifier = JAP_anti_communist_bulwark }
+				ROOT = { add_opinion_modifier = { target = PREV modifier = JAP_anti_communist_bulwark } }
+			}
+			# SOV = { add_opinion_modifier = { target = ROOT modifier = JAP_anti_communist_bulwark } }
+			# PRC = { add_opinion_modifier = { target = ROOT modifier = JAP_anti_communist_bulwark } }
+			# add_opinion_modifier = { target = SOV modifier = JAP_anti_communist_bulwark }
+			# add_opinion_modifier = { target = PRC modifier = JAP_anti_communist_bulwark }
+		}
+	}
+
+	focus = {
+		id = JAP_non_aggression_pact_with_the_soviet_union  ##与苏互不侵犯
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = Tokyo_Conference }
+		mutually_exclusive = { focus = Establishing_Anti_Soviet_Goals }
+		relative_position_id = Tokyo_Conference
+		x = -1
+		y = 1
+		
+		dynamic = yes  
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			OR = {
+				has_non_aggression_pact_with = SOV
+				has_war_with = SOV
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = { country_event = { id = wtt_japan.11 } }
+		}
+	}
+
+	focus = {
+		id = JAP_sign_tripartite_pact  ##三国同盟
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = Tokyo_Conference }
+		x = 1
+		y = 1
+		relative_position_id = Tokyo_Conference
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				NOT = { GER = { is_in_faction_with = ITA } }
+			}
+		}
+
+		available = {
+			any_country = {
+				original_tag = GER
+				
+				NOT = { has_war_with = ROOT }
+			}
+			any_country = {
+				original_tag = ITA
+				
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = JAP_sign_tripartite_pact_bypass_tt
+					OR = {
+						NOT = {
+							any_country = {
+								original_tag = GER
+								has_government = fascism
+							}
+						}
+						any_country = {
+							original_tag = GER
+							has_government = fascism
+							has_war_with = ROOT
+						}
+						NOT = {
+							any_country = {
+								original_tag = ITA
+								has_government = fascism
+							}
+						}
+						any_country = {
+							original_tag = ITA
+							has_government = fascism
+							has_war_with = ROOT
+						}	
+					}	
+				}
+				AND = {
+					GER = {
+						has_government = fascism
+						has_war_with = ITA
+					}
+					ITA = {
+						has_government = fascism
+						has_war_with = GER
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			random_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				country_event = { id = wtt_japan.109 days = 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_strike_south_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = Tokyo_Conference }
+		x = 0
+		y = 2
+		relative_position_id = Tokyo_Conference
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				FRA = { has_war = yes }
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = JAP_strike_south_doctrine
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine	
+			}
+			unlock_decision_tooltip = JAP_pressure_france
+		}
+	}
+
+	
+	focus = {
+		id = JAP_strike_on_the_southern_resource_area1
+		icon = GFX_focus_jap_strike_south
+		prerequisite = { focus = JAP_strike_south_doctrine }
+		x = 0
+		y = 1
+		relative_position_id = JAP_strike_south_doctrine
+
+		will_lead_to_war_with = ENG
+		will_lead_to_war_with = MAL
+		will_lead_to_war_with = INS
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1940.1.1
+			}
+			modifier = {
+				factor = 0
+				ENG = { has_war = no }
+				HOL = { has_war = no }
+			}
+			modifier = {
+				has_war_with = SOV
+				factor = 0
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			OR = {			
+				has_wargoal_against = INS
+				has_war_with = INS
+			}
+			OR = {
+				has_wargoal_against = MAL
+				has_war_with = MAL
+			}
+			OR = {
+				AND = {
+					671 = {
+						NOT = { is_controlled_by = FRA }
+					}
+					670 = {
+						NOT = { is_controlled_by = FRA }
+					}
+					286 = {
+						NOT = { is_controlled_by = FRA }
+					}
+					741 = {
+						NOT = { is_controlled_by = FRA }
+					}
+				}
+				has_wargoal_against = FRA
+				has_war_with = FRA
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_wargoal_against = INS }
+					NOT = { has_war_with = INS }
+					country_exists = INS
+					if = {
+						limit = {
+							INS = { is_subject_of = HOL }
+						}
+						OR = {
+							has_country_flag = HOL_declare_war_indies_allowed
+							HOL = { NOT = { has_completed_focus = HOL_placate_the_japanese } }
+						}
+					}
+				}
+				create_wargoal = {
+					target = INS
+					type = annex_everything
+					expire = 0
+				}
+				add_ai_strategy = {
+					type = conquer
+					id = "INS"
+					value = 200
+				}
+
+				if = {
+					limit = {
+						INS = {
+							any_core_state = {
+								NOT = {
+									is_owned_and_controlled_by = INS
+								}
+							}
+						}
+					}
+
+					INS = { #I see what you are doing you cheeky exploiter
+						every_core_state = {
+							limit = {
+								NOT = { is_owned_and_controlled_by = PREV }
+							}
+
+							ROOT = {
+								create_wargoal = {
+									target = PREV.controller
+									type = annex_everything
+									expire = 0
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					INS = { exists = no }
+					335 = {
+						CONTROLLER = {
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+					if = {
+						limit = {
+							335 = {
+								CONTROLLER = {
+									tag = HOL
+								}
+							}
+						}
+						OR = {
+							has_country_flag = HOL_declare_war_indies_allowed
+							HOL = { NOT = { has_completed_focus = HOL_placate_the_japanese } }
+						}
+					}
+				}
+				335 = {
+					OWNER = {
+						ROOT = {
+							create_wargoal = {
+								target = PREV
+								type = take_state_focus
+								expire = 0
+								generator = { 335 334 672 673 668 667 669 738 }
+							}
+							add_ai_strategy = {
+								type = conquer
+								id = PREV
+								value = 200
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_wargoal_against = MAL }
+					NOT = { has_war_with = MAL }
+					country_exists = MAL
+				}
+				create_wargoal = {
+					target = MAL
+					type = annex_everything
+					expire = 0
+				}
+				add_ai_strategy = {
+					type = conquer
+					id = "MAL"
+					value = 200
+				}
+			}
+			if = {
+				limit = {
+					MAL = { exists = no }
+					336 = {
+						CONTROLLER = {
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				336 = {
+					OWNER = {
+						ROOT = {
+							create_wargoal = {
+								target = PREV
+								type = take_state_focus
+								expire = 0
+								generator = { 336 }
+							}
+							add_ai_strategy = {
+								type = conquer
+								id = PREV
+								value = 200
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						671 = {
+							is_controlled_by = FRA
+						}
+						670 = {
+							is_controlled_by = FRA
+						}
+						286 = {
+							is_controlled_by = FRA
+						}
+						741 = {
+							is_controlled_by = FRA
+						}
+					}
+					NOT = { has_wargoal_against = FRA }
+					NOT = { has_war_with = FRA }
+				}
+				#Might be generating on states FRA does not own, but not worth the time to get it exact. Should have no gameplay impact.
+				create_wargoal = {
+					target = FRA
+					type = take_state_focus
+					expire = 0
+					generator = { 671 670 286 741 }
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_greater_east_asian_co_prosperity_sphere  ##大东亚
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = Tokyo_Conference }
+		x = 3
+		y = 1
+		relative_position_id = Tokyo_Conference
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = JAP_greater_east_asian_co_prosperity_sphere
+		}
+	}
+
+	focus = {
+		id = Co_prosperity_and_sharing #共荣共享
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = JAP_greater_east_asian_co_prosperity_sphere
+		prerequisite = { focus = JAP_greater_east_asian_co_prosperity_sphere }
+
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = X
+			modifier = {
+				#条件
+				#Add、Factor、Base中选择其一
+			}
+		}
+         
+		available = {	
+			is_in_faction = yes	
+			##点国策条件
+		}
+		bypass = {
+			#跳过国策的条件
+		}
+		
+		search_filters = { }   #标签
+
+		completion_reward = {	
+			add_ideas = JAP_East_Asian_co_prosperity
+			#效果
+			every_country = {
+				limit = {
+					NOT = { original_tag = JAP }
+					is_in_faction_with = JAP
+				}
+				add_ideas = East_Asian_co_prosperity 
+			}
+
+		}
+	}
+
+	focus = {
+		id = JAP_develop_chinese_resources
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = JAP_greater_east_asian_co_prosperity_sphere }
+		x = -1
+		y = 1
+		relative_position_id = JAP_greater_east_asian_co_prosperity_sphere
+
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			 is_in_faction_with = CHI 
+			CHI = {
+			has_full_control_of_state = 605
+			has_full_control_of_state = 325
+			}
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			605 = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
+			325 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+			
+		}
+	}
+
+	
+	focus = {
+		id = Preparing_for_War_against_the_US ##准备对美战争
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = Tokyo_Conference
+		prerequisite = { focus = Tokyo_Conference }
+		mutually_exclusive = { focus = Pacific_Upwind_Wav_Setting }
+
+		x = 5
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = X
+			modifier = {
+				#条件
+				#Add、Factor、Base中选择其一
+			}
+		}
+         
+		available = {			
+			##点国策条件
+		}
+		bypass = {
+			#跳过国策的条件
+		}
+		
+		search_filters = { }   #标签
+
+		completion_reward = {
+			add_state_claim = 638
+			add_state_claim = 632
+			add_state_claim = 631
+			add_state_claim = 630
+			add_state_claim = 642
+			add_state_claim = 727
+			add_state_claim = 629	
+			#效果
+			add_tech_bonus = {
+				bonus = 3.0 
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				bonus = 3.0 
+				uses = 1
+				category = tp_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = The_last_war_against_American_imperialism #对美帝国主义的最后一战
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = Preparing_for_War_against_the_US
+		prerequisite = { focus = Preparing_for_War_against_the_US }
+	
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = X
+			modifier = {
+				#条件
+				#Add、Factor、Base中选择其一
+			}
+		}
+         
+		available = {			
+			##点国策条件
+		}
+		bypass = {
+			#跳过国策的条件
+		}
+		
+		search_filters = { }   #标签
+
+		completion_reward = {	
+			#效果
+			create_wargoal = { target = USA type = annex_everything } 
+		}
+	}
+
+	
+	focus = {
+		id = Pacific_Upwind_Wav_Setting #太平洋上风波定
+		icon = GFX_goal_generic_intelligence_exchange
+		relative_position_id = Tokyo_Conference
+		prerequisite = { focus = Tokyo_Conference }
+		mutually_exclusive = { focus = Preparing_for_War_against_the_US }
+		x = 7
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = X
+			modifier = {
+				#条件
+				#Add、Factor、Base中选择其一
+			}
+		}
+         
+		available = {			
+			##点国策条件
+		}
+		bypass = {
+			#跳过国策的条件
+		}
+		
+		search_filters = { }   #标签
+
+		completion_reward = {	
+			#效果
+			country_event = { id = D_japan.6 }
+			USA = {
+			country_event = { id = D_japan.5 } 
+		}
+	    }
+	}
+
+	##东亚民主的灯塔
 
 
 }

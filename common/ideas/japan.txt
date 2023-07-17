@@ -1633,5 +1633,47 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		
+		East_Asian_co_prosperity = {  ##东亚共荣
+			
+			picture = SPR_seize_the_gold_reserves
 
+			
+			cancel = { 
+				is_in_faction_with = JAP
+			
+			}
+			targeted_modifier = {
+                tag = JAP
+                cic_to_target_factor = 0.05
+                mic_to_target_factor = 0.05
+            }
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.1
+				
+			}
+
+		}
+
+		JAP_East_Asian_co_prosperity = {  ##东亚共荣
+			
+			picture = warrior_traditions_idea
+
+			
+			cancel = { 
+				original_tag = JAP
+			}
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.05
+				 
+			}
+			
+
+		}
+
+	}
 }

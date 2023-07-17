@@ -62,7 +62,6 @@ country_event = {
 	is_triggered_only = yes
     
 	
-	
     option = { 
 		add_power_balance_value = {
 			id = JAP_centralization_bop
@@ -84,6 +83,162 @@ country_event = {
 		
 	}
 	
-
     
 }
+
+
+news_event = {   ##第二次东方会议
+	id = D_japan.4
+
+	is_triggered_only = yes
+	title = D_japan.4.t 
+    desc = D_japan.4.d 
+
+    major = yes
+
+	option = {
+		name = D_japan.4.a
+	}
+}
+
+country_event = {  ##美日谈判
+	id = D_japan.5  
+    title = D_japan.5.t
+    desc = D_japan.5.d
+	
+	
+    is_triggered_only = yes
+   
+    fire_only_once = yes
+    
+	hidden = no 
+
+	immediate = { 
+	
+	}
+	
+    option = { 
+        name = D_japan.5.a
+		give_guarantee = JAP
+		give_military_access = JAP
+	JAP = {
+		give_military_access = USA
+		give_guarantee = USA
+		transfer_state = 638
+		transfer_state = 638
+	}
+		
+	}
+	option = { 
+        name = D_japan.5.b
+		JAP = { country_event = { id = D_japan.7 } }	 
+		
+	}
+	option = { 
+        name = D_japan.5.c
+		JAP = { country_event = { id = D_japan.8 } }
+	}
+    
+}
+
+news_event = {   ##美日太平洋谈判
+	id = D_japan.6
+
+	is_triggered_only = yes
+	title = D_japan.6.t 
+    desc = D_japan.6.d 
+
+    major = yes
+
+	option = {
+		name = D_japan.6.a
+	}
+}
+
+country_event = {  ##美国要约
+	id = D_japan.7  
+    title = D_japan.7.t
+    desc = D_japan.7.d
+	
+	
+    is_triggered_only = yes
+   
+    fire_only_once = yes
+    
+	hidden = no 
+
+	immediate = { 
+		USA = { give_guarantee = JAP }
+		JAP = {
+			give_guarantee = USA
+		}
+	}
+	
+    option = { 
+        name = D_japan.7.a
+	
+	}
+		
+	option = { 
+        name = D_japan.7.b
+		add_state_claim = 638
+		add_state_claim = 632
+		add_state_claim = 631
+		add_state_claim = 630
+		add_state_claim = 642
+		add_state_claim = 727
+		add_state_claim = 629	
+		complete_national_focus = Preparing_for_War_against_the_US
+		add_tech_bonus = {
+			bonus = 3.0 
+			uses = 1
+			category = marine_tech
+		}
+		add_tech_bonus = {
+			bonus = 3.0 
+			uses = 1
+			category = tp_tech
+		}
+		 
+	}
+}	
+
+country_event = {  ##美国无视我方
+	id = D_japan.8  
+    title = D_japan.8.t
+    desc = D_japan.8.d
+	
+	
+    is_triggered_only = yes
+   
+    fire_only_once = yes
+    
+	hidden = no 
+
+	immediate = { 
+	
+	}
+		
+	option = { 
+        name = D_japan.8.a
+		add_state_claim = 638
+		add_state_claim = 632
+		add_state_claim = 631
+		add_state_claim = 630
+		add_state_claim = 642
+		add_state_claim = 727
+		add_state_claim = 629	
+		complete_national_focus = Preparing_for_War_against_the_US
+		add_tech_bonus = {
+			bonus = 3.0 
+			uses = 1
+			category = marine_tech
+		}
+		add_tech_bonus = {
+			bonus = 3.0 
+			uses = 1
+			category = tp_tech
+		}
+		 
+	}
+}	

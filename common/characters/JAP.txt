@@ -1644,7 +1644,7 @@ characters={
 		name = JAP_tojo_hideki
 		portraits = {
 			army = {
-				small = 0
+				small = GFX_idea_asia_generic_land_3
 			}
 		}
 		advisor = {
@@ -1663,7 +1663,7 @@ characters={
 		name = JAP_wakatsuki_neijirou
 		portraits = {
 			army = {
-				small = 0
+				small = GFX_idea_asia_generic_democracy
 			}
 		}
 		advisor = {
