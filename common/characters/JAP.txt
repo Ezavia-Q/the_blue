@@ -1123,7 +1123,7 @@ characters={
 		}
 	}
 
-	JAP_hideki_tojo={
+	JAP_hideki_tojo={  ##changed
 		name=JAP_hideki_tojo
 		portraits={
 			army={
@@ -1142,6 +1142,16 @@ characters={
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_tojo_hideki
+			traits = {
+				unanimous_support
+			}
+			available = {
+				has_completed_focus = Fumimaro_Cabinet1
 			}
 		}
 	}
@@ -1636,25 +1646,6 @@ characters={
 			idea_token = JAP_nakajima_chikohei
 			traits = {
 				plane_trader
-			}
-		}
-	}
-
-	JAP_tojo_hideki = {
-		name = JAP_tojo_hideki
-		portraits = {
-			army = {
-				small = GFX_idea_asia_generic_land_3
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = JAP_tojo_hideki
-			traits = {
-				unanimous_support
-			}
-			available = {
-				has_completed_focus = Fumimaro_Cabinet1
 			}
 		}
 	}

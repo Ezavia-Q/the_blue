@@ -41,7 +41,7 @@ country_event = {
 		}
         name = D_japan.2.a  ##同意
 		add_political_power = 25
-		add_ideas = Asian_Investment_Bank_Development
+		add_timed_idea = { idea = Asian_Investment_Bank_Development days = 70 }
 		JAP = {
 		country_event = { days = 0 id = D_japan.3 }
 			}

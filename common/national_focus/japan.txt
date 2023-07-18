@@ -652,6 +652,7 @@
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			MAN = {	
+				add_ideas = South_Manchuria_Railwa_Company
 				give_resource_rights = { receiver = JAP state = 328 }
 				give_resource_rights = { receiver = JAP state = 716 }			
 				add_stability = 0.1
@@ -1316,7 +1317,7 @@
 		y = 2
 		relative_position_id = JAP_army_expansion_law
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1397,7 +1398,7 @@
 		y = 1
 		relative_position_id = JAP_fighter_modernization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1649,7 +1650,7 @@
 		y = 0
 		relative_position_id = JAP_army_expansion_law
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1772,7 +1773,7 @@
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1929,7 +1930,7 @@
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2358,7 +2359,8 @@
 		search_filters = { }   #标签
 
 		completion_reward = {
-			CHI = { country_event = wtt_japan.11 
+			CHI = { add_ideas = CHI_RailwayCoLtd
+				country_event = wtt_japan.11 
 			       transfer_state = 524
 		        } #TODO_WTT_CD make a proper is nationalist china trigger
 			613 = {
@@ -2675,7 +2677,7 @@
 		x = -3
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = X
@@ -2720,7 +2722,7 @@
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = X
@@ -2805,7 +2807,7 @@
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = X
@@ -3392,7 +3394,7 @@
 		y = 1
 		relative_position_id = WDZF
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -4261,7 +4263,7 @@
 		icon = GFX_goal_generic_intelligence_exchange
 		relative_position_id = Tokyo_Conference
 		prerequisite = { focus = Tokyo_Conference }
-		mutually_exclusive = { focus = Preparing_for_War_against_the_US }
+		mutually_exclusive = { focus = Preparing_for_War_against_the_US } 
 		x = 7
 		y = 1
 

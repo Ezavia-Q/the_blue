@@ -2,7 +2,7 @@ JAP_centralization_bop = {
 	initial_value = 0.75
 	left_side = JAP_Civilian_government ##文官
 	right_side = JAP_army_headquarters  ##军部
-	decision_category = JAP_centralization_bop  
+	decision_category = JAP_centralization_bop_DC  
 
 	range = { #权力平衡，平衡政府
 		id = JAP_centralization_bop 

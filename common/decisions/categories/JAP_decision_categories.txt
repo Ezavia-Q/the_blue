@@ -51,3 +51,13 @@ Investing_in_Asia = {      ##投资亚洲
 		has_idea = Development_Bank_Headquarters
 	}
 }
+JAP_centralization_bop_DC = {      ##权力平衡决议组
+	allowed = {
+		original_tag = JAP
+		
+	}
+	visible = {
+		is_puppet = no
+		has_completed_focus = Urgent_cabinet_formation
+	}
+}

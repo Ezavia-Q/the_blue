@@ -88,6 +88,10 @@ Fumimaro_Cabinet:0"近卫内阁"
 Yoshida_Cabinet:0"吉田内阁"
 Hirota_Cabinet:0"广田内阁"
 not_have_Cabinet:0"空内阁"
+South_Manchuria_Railwa_Company:0"满洲铁道株式会社"
+JAP_East_Asian_co_prosperity:0"共荣共享"
+East_Asian_co_prosperity:0"共荣共享"
+CHI_RailwayCoLtd:0"日本的遗留影响"
 
 ##决议
 CHI_Investing_in_Asia:0"中国开发"
@@ -98,6 +102,16 @@ RAJ_Investing_in_Asia:0"印度开发"
 Clearing_the_Asian_Investment_Bank:0"清算破产亚投行"
 Investing_in_Asia:0"亚投行开发计划"
 Economic_investment:0"正在投资"
+
+Convene_a_joint_meeting:0"召开联席会议"
+Review_Army:0"审查陆军"
+Review_Navy:0"审查海军"
+Convene_a_meeting:0"召开议事会"
+Refute_Militarism:0"驳斥军国主义"
+Support_the_headquarters:0"支持大本营"
+Strengthen_Air_Force_Production:0"强化空军生产"
+Strengthen_Navy_Force_Production:0"强化海军生产"
+Persist_in_common_prosperity:0"坚持共荣"
 
 #bop
 Rikken_Seiyukai:0"立宪政友会"

@@ -8384,6 +8384,7 @@ leader_traits = {
 	##new traits
 	plane_trader = {  ##飞机商人
 		random = no
+		sprite = 14
 		aircraft_manufacturer_cost_factor = -0.1
 		equipment_bonus = {
 			fighter_equipment = {
@@ -8395,6 +8396,7 @@ leader_traits = {
 
 	popular_politician = { ##民众政治家
 		random = no
+		sprite = 13
 		stability_factor = 0.1
 		political_power_factor = 0.05
 		democratic_drift = 0.05
@@ -8402,6 +8404,7 @@ leader_traits = {
 
 	daiseiyokusankai_creator = {  ##大政翼赞会创始人
 		random = no
+		sprite = 13
 		production_speed_buildings_factor = 0.05
 		industrial_capacity_factory = 0.1
 		consumer_goods_factor = 0.03
@@ -8410,6 +8413,7 @@ leader_traits = {
 
 	unanimous_support = {  ##举国一致体制支持者
 		random = no
+		sprite = 13
 		JAP_centralization_bop_modifier_weekly = {
 			power_balance_weekly = 0.05
 		}
@@ -8419,6 +8423,7 @@ leader_traits = {
 
 	prewar_pacifist = {  ##战前和平主义者代表
 		random = no
+		sprite = 13
 		war_support_factor = -0.1
 		stability_factor = 0.05
 		neutrality_acceptance = 20
@@ -8427,6 +8432,7 @@ leader_traits = {
 
 	anti_military_fighter = {  ##反军部斗士
 		random = no
+		sprite = 13
 		stability_factor = 0.05
 		political_power_factor = 0.1
 		fascism_acceptance = -25
@@ -8435,6 +8441,7 @@ leader_traits = {
 
 	showa_no_mikoto = {  ##昭和之妖
 		random = no
+		sprite = 10
 		consumer_goods_factor = 0.03
 		production_speed_buildings_factor = 0.1
 		stability_weekly = -0.001

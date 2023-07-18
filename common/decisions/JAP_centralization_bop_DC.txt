@@ -1,0 +1,254 @@
+
+JAP_centralization_bop_DC = {
+	Convene_a_joint_meeting = {   ##召开联席会议
+
+		cost = 30
+		days_remove = 7	
+		fire_only_once = NO
+		days_re_enable = 70
+
+		allowed/available/visible = {
+
+		}
+		ai_will_do = {
+			factor = 5
+			
+		}
+		
+		complete_effect = {  
+			add_power_balance_value = {
+				id = JAP_centralization_bop
+				value = -0.15
+			}
+		}
+		remove_effect = {
+			
+		}
+	}
+
+	Review_Army = {   ##审查陆军
+
+		cost = 25
+		days_remove = 7	
+		fire_only_once = NO
+		days_re_enable = 70
+
+		allowed/available/visible = {
+
+		}
+		ai_will_do = {
+			factor = 5
+			
+		}
+		
+		complete_effect = {  
+			add_power_balance_value = {
+				id = JAP_centralization_bop
+				value = 0.1
+			}
+		}
+		remove_effect = {
+			army_experience = 20
+		}
+	}
+	Review_Navy = {   ##审查海军
+
+	cost = 25
+	days_remove = 7	
+	fire_only_once = NO
+	days_re_enable = 70
+
+	allowed/available/visible = {
+
+	}
+	ai_will_do = {
+		factor = 5
+		
+	}
+	
+	complete_effect = {  
+		add_power_balance_value = {
+			id = JAP_centralization_bop
+			value = 0.1
+		}
+	}
+	remove_effect = {
+		navy_experience = 20
+	}
+ }
+
+	 Convene_a_meeting = {   ##召开议事会
+
+	 cost = 150
+	 days_remove = 7	
+	 fire_only_once = NO
+	 days_re_enable = 70
+ 
+	 allowed/available/visible = {
+ 
+	 }
+	 ai_will_do = {
+		 factor = 5
+		 
+	 }
+	 
+	 complete_effect = {  
+		 add_power_balance_value = {
+			 id = JAP_centralization_bop
+			 value = 0.1
+		 }
+	 }
+	 remove_effect = {
+		add_political_power = 100
+		add_stability = 0.05
+	 }
+ 
+  }
+
+  Refute_Militarism = {   ##驳斥军国主义
+
+		cost = 70
+		days_remove = 7	
+		fire_only_once = NO
+		days_re_enable = 70
+
+		allowed/available/visible = {
+
+		}
+		ai_will_do = {
+			factor = 5
+			
+		}
+		
+		complete_effect = {  
+			add_power_balance_value = {
+				id = JAP_centralization_bop
+				value = -0.15
+			}
+		}
+		remove_effect = {
+			add_war_support = -0.05
+			add_political_power = -15
+		}
+	}
+	Support_the_headquarters = {   ##支持大本营
+
+	cost = 0
+	days_remove = 7	
+	fire_only_once = NO
+	days_re_enable = 70
+
+	
+	ai_will_do = {
+		factor = 0
+		
+	}
+	
+	complete_effect = {  
+		add_power_balance_value = {
+			id = JAP_centralization_bop
+			value = 0.15
+		}
+	}
+	remove_effect = {
+		add_war_support = 0.05
+		add_political_power = 30
+		air_experience = 10
+		navy_experience = 10
+		army_experience = 10
+	}
+ }
+
+
+
+
+	Strengthen_Air_Force_Production = {   ##强化空军生产
+
+	cost = 100
+	days_remove = 120	
+	fire_only_once = NO
+	days_re_enable = 70
+
+	visible = {
+		has_completed_focus = WDZF
+	}
+	ai_will_do = {
+		factor = 5
+		
+	}
+	
+	complete_effect = {  
+		add_power_balance_value = {
+			id = JAP_centralization_bop
+			value = 0.15
+		}
+	}
+	modifier = {
+		industrial_capacity_factory = 0.25
+	}
+	remove_effect = {
+		air_experience = 20
+	}
+ }
+
+
+	Strengthen_Navy_Force_Production = {   ##强化海军生产
+
+	cost = 100
+	days_remove = 120	
+	fire_only_once = NO
+	days_re_enable = 70
+
+	visible = {
+		has_completed_focus = WDZF
+	}
+	ai_will_do = {
+		factor = 5
+		
+	}
+	
+	complete_effect = {  
+		add_power_balance_value = {
+			id = JAP_centralization_bop
+			value = 0.15
+		}
+	}
+	modifier = {
+		industrial_capacity_dockyard = 0.25
+	}
+	remove_effect = {
+		navy_experience = 20
+	}
+ }
+
+	Persist_in_common_prosperity = {   ##坚持共荣
+	cost = 0
+	days_remove = 7	
+	fire_only_once = NO
+	days_re_enable = 7
+
+	visible = {
+		has_completed_focus = Co_prosperity_and_sharing
+	}
+
+	ai_will_do = {
+		factor = 5
+		
+	}
+	
+	complete_effect = {  
+		every_country = {
+			limit = {
+				NOT = { original_tag = JAP }
+				is_in_faction_with = JAP
+			}
+			add_ideas = East_Asian_co_prosperity 
+		}
+	}
+		
+	remove_effect = {
+		
+	}
+
+}
+

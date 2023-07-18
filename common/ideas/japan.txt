@@ -1634,6 +1634,23 @@ ideas = {
 		}
 	}
 	country = {
+			
+		CHI_RailwayCoLtd = {   ##日本在中国的遗留影响
+				
+		picture = seize_the_gold_reserves
+
+		targeted_modifier = {
+			tag = JAP
+			cic_to_target_factor = 0.1
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.05
+			production_speed_infrastructure_factor = 0.1
+		}
+
+
+		}
 		
 		East_Asian_co_prosperity = {  ##东亚共荣
 			
@@ -1641,8 +1658,7 @@ ideas = {
 
 			
 			cancel = { 
-				is_in_faction_with = JAP
-			
+				not = { is_in_faction_with = JAP }
 			}
 			targeted_modifier = {
                 tag = JAP
@@ -1658,22 +1674,59 @@ ideas = {
 
 		}
 
-		JAP_East_Asian_co_prosperity = {  ##东亚共荣
-			
+		JAP_East_Asian_co_prosperity = {  ##东亚共荣			
 			picture = warrior_traditions_idea
-
+			cancel = { 
+				not = { original_tag = JAP }
+			}
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.05				 
+			}
 			
+		}
+		
+	
+		picture = SPR_seize_the_gold_reserves
+			
+		cancel = { 
+			
+		
+		}
+		targeted_modifier = {
+			tag = JAP
+			cic_to_target_factor = 0.5
+		}
+		modifier = {
+			production_speed_buildings_factor = 0.1
+			production_speed_infrastructure_factor = 0.2
+			consumer_goods_factor = -0.10
+		}
+
+		}
+
+		South_Manchuria_Railwa_Company = {  ##南满			
+			picture = warrior_traditions_idea
 			cancel = { 
 				original_tag = JAP
 			}
 			modifier = {
 				stability_factor = 0.1
-				consumer_goods_factor = -0.05
-				 
-			}
+				consumer_goods_factor = -0.05				 
+			}	
+		picture = SPR_seize_the_gold_reserves
 			
-
+		targeted_modifier = {
+			tag = JAP
+			cic_to_target_factor = 0.5
+		}
+		modifier = {
+			production_speed_buildings_factor = 0.2
+			production_speed_infrastructure_factor = 0.2
+			consumer_goods_factor = -0.10
 		}
 
+	
 	}
 }
+
