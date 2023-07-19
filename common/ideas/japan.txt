@@ -1716,7 +1716,7 @@ ideas = {
 			}	
 		picture = SPR_seize_the_gold_reserves
 			
-		targeted_modifier = {
+		targeted_modifier = {  
 			tag = JAP
 			cic_to_target_factor = 0.5
 		}
@@ -1725,8 +1725,17 @@ ideas = {
 			production_speed_infrastructure_factor = 0.2
 			consumer_goods_factor = -0.10
 		}
-
-	
 	}
+	Weak_government = { ##软弱政府
+			
+	picture = warrior_traditions_idea
+
+	modifier = {
+		stability_weekly = -0.001
+		political_power_factor = -0.15
+		war_support_weekly = -0.001
+	}
+
+}
 }
 

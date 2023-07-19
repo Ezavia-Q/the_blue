@@ -78,7 +78,7 @@
 		search_filters = { }   #标签
 
 		completion_reward = {	
-			
+			set_country_flag = Democratic_Japan 
 			#效果
 			add_political_power = 100
 			set_party_name = { ideology = democratic long_name = Rikken_Seiyukai name = Rikken_Seiyukai }
@@ -661,6 +661,47 @@
 			}
 		}
 	}
+
+	
+	focus = {
+		id = Suppress_Kwantung_Army##压制关东军
+		icon = GFX_focus_jap_manchurian_project#在.gfx文件里的图片名
+		relative_position_id = JAP_the_manchurian_project
+		prerequisite = { focus = JAP_the_manchurian_project }
+		x = -4
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = X
+			modifier = {
+				#条件
+				#Add、Factor、Base中选择其一
+			}
+		}
+         
+		available = {			
+			##点国策条件
+		}
+		bypass = {
+			#跳过国策的条件
+		}
+		
+		search_filters = { }   #标签
+
+		completion_reward = {	
+			#效果
+			custom_effect_tooltip = Suppress_Kwantung_Army_1
+			set_country_flag = Suppress_Kwantung_Army
+			MAN = { 
+				add_popularity = { ideology = fascism popularity = -0.15 }
+				set_country_flag = Suppress_Kwantung_Army	
+		}
+		}
+	}
+
+
 
 	focus = {
 		id = JAP_expand_the_showa_steel_works

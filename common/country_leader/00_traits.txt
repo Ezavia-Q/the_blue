@@ -8448,4 +8448,10 @@ leader_traits = {
 		industrial_capacity_factory = 0.1
 		production_factory_efficiency_gain_factor = 0.05
 	}
+
+	kantougunnogoeremu = { ##关东军的傀儡
+		random = no
+		ai_get_ally_desire_factor = -1000
+		ai_focus_aggressive_factor = 50
+	}
 }
