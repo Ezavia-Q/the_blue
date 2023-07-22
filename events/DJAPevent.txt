@@ -594,3 +594,87 @@ country_event = {
 	}
     
 }
+
+country_event = {   ##1942年大选
+	id = D_japan.17
+    title = D_japan.17.t
+    desc = D_japan.17.d
+    #title和desc皆为文本代码，需在本地化文件写文本#
+	
+	
+    trigger = {
+		date > 1942.4.1
+		NOT = {
+			has_completed_focus = WDZF
+		}
+    }
+   
+    fire_only_once = yes
+    
+	
+
+	immediate = { 
+		
+	}
+	
+    option = { 
+        name = D_japan.17.a  ##民政党 町田忠治
+		trigger = {
+			has_war = no
+		}
+		swap_ideas = {
+			add_idea = Machida_Cabinet
+			remove_idea = Yoshida_Cabinet
+		}
+		#直接在option下写该选项的效果
+		set_power_balance = {
+			id = JAP_centralization_bop				
+			right_side = JAP_liberal_bastion
+			left_side = JAP_Democratic_Lighthouse					
+		}
+        add_power_balance_value = {
+			id = JAP_centralization_bop
+			value = -0.15
+		}
+		
+	}
+	option = { 
+        name = D_japan.17.b  ##政友会  久原房之助
+		trigger = {
+			has_war = no
+		}
+		swap_ideas = {
+			add_idea = Kuhara_Cabinet
+			remove_idea = Yoshida_Cabinet
+		}
+		#直接在option下写该选项的效果
+		add_power_balance_value = {
+			id = JAP_centralization_bop
+			value = -0.15
+		}
+		set_power_balance = {
+			id = JAP_centralization_bop				
+			right_side = JAP_liberal_bastion
+			left_side = JAP_Democratic_Lighthouse					
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = Constitutional_Democratic_Party
+			name = Constitutional_Democratic_Party
+		}
+	}
+
+	option = { 
+        name = D_japan.17.c  ##继续
+		trigger = {
+			has_war = yes
+		}
+		#直接在option下写该选项的效果
+        add_power_balance_value = {
+			id = JAP_centralization_bop
+			value = 0.15
+		}
+		
+	}
+    
+}

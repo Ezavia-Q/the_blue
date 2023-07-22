@@ -3306,7 +3306,8 @@
 		}
 	}
  
- }
+ 	}
+	##民主灯塔 1942
 
 
 
@@ -3379,7 +3380,18 @@
 		search_filters = { }   #标签
 
 		completion_reward = {	
-			
+			set_rule = { 
+				can_declare_war_on_same_ideology = no
+			}
+			set_rule = { 
+				can_only_justify_war_on_threat_country = no
+			}
+			set_rule = { 
+				can_puppet = yes
+			}
+			set_rule = { 
+				can_guarantee_other_ideologies = yes
+			}
 			#效果
 			set_power_balance = {
 				id = JAP_centralization_bop				
